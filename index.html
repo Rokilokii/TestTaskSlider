@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Test Task Slider</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="price-input">
+        <div class="price-input__field">
+          <input
+            type="number"
+            min="0"
+            class="price-input__min"
+            value="100"
+            oninput="this.value = 
+          !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null"
+          />
+          <span>₽</span>
+        </div>
+
+        <div class="price-input__field">
+          <input
+            type="number"
+            class="price-input__max"
+            value="900"
+            oninput="this.value = 
+          !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null"
+          />
+          <span>₽</span>
+        </div>
+      </div>
+
+      <div class="slider">
+        <div class="progress"></div>
+      </div>
+
+      <div class="range-input">
+        <input
+          type="range"
+          class="range-input__min"
+          min="0"
+          max="1100"
+          data-max="1200"
+          value="100"
+          step="100"
+        />
+        <input
+          type="range"
+          class="range-input__max"
+          min="0"
+          max="1100"
+          data-max="1200"
+          value="900"
+          step="100"
+        />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
